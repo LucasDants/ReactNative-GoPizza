@@ -1,6 +1,7 @@
+import { Button } from '@components/Button';
 import { LinearGradient } from 'expo-linear-gradient';
 import { BorderlessButton } from 'react-native-gesture-handler';
-import { getStatusBarHeight } from 'react-native-iphone-x-helper';
+import { getBottomSpace, getStatusBarHeight } from 'react-native-iphone-x-helper';
 import styled, { css } from 'styled-components/native'
 
 export const Container = styled.View`
@@ -61,6 +62,11 @@ export const Title = styled.Text`
 
     ${({ theme }) => css`
         font-family: ${theme.FONTS.TITLE};
-        color: ${theme.COLORS.SECONDARY_900}
+        color: ${theme.COLORS.SECONDARY_900};
     `}
+`
+
+export const NewProductButton = styled(Button)`
+    margin: 0 24px;
+    margin-bottom: ${getBottomSpace() + 12}px;
 `
