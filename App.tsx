@@ -12,6 +12,7 @@ import { StatusBar } from 'react-native';
 import { AuthProvider } from '@hooks/auth';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { Product } from '@screens/Product';
+import { Home } from '@screens/Home';
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -28,7 +29,7 @@ export default function App() {
       <ThemeProvider theme={theme}>
         <StatusBar barStyle="light-content" backgroundColor="transparent" translucent />
         <AuthProvider>
-          <Product />
+          <Home />
         </AuthProvider>
       </ThemeProvider>
     </GestureHandlerRootView>

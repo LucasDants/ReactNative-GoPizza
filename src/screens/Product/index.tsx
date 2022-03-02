@@ -135,7 +135,7 @@ export function Product(){
             <InputPrice size="G"onChangeText={setPriceSizeG} value={priceSizeG} />
           </InputGroup>
 
-          <Button title="Cadastrar Pizza" isLoading={true} onPress={handleAdd} />
+          <Button title="Cadastrar Pizza" isLoading={isLoading} onPress={handleAdd} />
 
         </Form>
       </ScrollView>
